@@ -3,6 +3,8 @@
 // romal numeral
 function letterCombinations(digits: any): string[] {
 
+    if (!digits) return [];
+
     function getLetters(number: string): any {
         let letters: string[] = []
         switch (number) {
@@ -53,13 +55,14 @@ function letterCombinations(digits: any): string[] {
         console.log(result[j])
         for(var k = 0; k < result[j].length; k++){
             console.log(result[j][k])
-            for(var l = 0; l < result[j].length; l++){
-
-                // console.log("++++++++++++")
-                // console.log(result[j][k])
-                // console.log("------------")
-                // console.log(result[j][l])
-            }
+            console.log(result[j++][0])
+            // for(var l = 0; l < result[j].length; l++){
+            //     console.log(result[j][k])
+            //     // console.log("++++++++++++")
+            //     // console.log(result[j][k])
+            //     // console.log("------------")
+            //     // console.log(result[j][l])
+            // }
         }
 
         combos.push(result[j])
